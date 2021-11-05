@@ -1,0 +1,30 @@
+输入五级制成绩，90~100为A，80~89为B，70~70为C，60~69为D，60分以下为E，否则为“未参加考试”
+#include<stdio.h>
+#include<math.h>
+main()
+{
+	char   grade;
+	grade = getchar();
+	grade=(grade>='A'&&grade<='Z')?grade : grade — 32; //若是小写字母转换成大写字母
+	switch(grade)
+{
+	case 'A' : case 'B' :  //可以两个 case 在一行，执行一样的语句
+	printf("90~100"); break;
+	
+	case 'C' :
+	printf("80~89"); break;
+	
+	case 'D' :
+	printf("70~79"); break;
+	
+	case 'E' :
+	printf("60~69"); break;
+	
+	case 'F' :
+	printf("<60"); break;
+	
+	default :
+	printf ("未参加考试");
+}
+return 0;
+}
